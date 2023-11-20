@@ -9,7 +9,6 @@ server = 'irc.chat.twitch.tv'
 port = 6667
 nickname = 'learndatasci'
 
-# add your token from https://twitchapps.com/tmi/ here
 token = os.environ.get("TWITCH_TOKEN")
 
 # your channel name

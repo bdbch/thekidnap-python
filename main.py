@@ -38,7 +38,7 @@ def main():
     resp = sock.recv(2048).decode('utf-8')
 
     # split from #channelName : and take last element
-    message = resp.split(f'${twitch.channel} :')[-1]
+    message = resp.split(f'{twitch.channel} :')[-1]
 
     # remove whitespaces and newlines and spaces
     # only allow alphanumeric characters and +
