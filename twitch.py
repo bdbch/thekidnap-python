@@ -1,14 +1,19 @@
+import os
 import socket
+
+from dotenv import load_dotenv
+
+load_dotenv()
 
 server = 'irc.chat.twitch.tv'
 port = 6667
 nickname = 'learndatasci'
 
 # add your token from https://twitchapps.com/tmi/ here
-token = 'oauth:PASS'
+token = os.environ.get("TWITCH_TOKEN")
 
 # your channel name
-channel = '#CHANNEL'
+channel = os.environ.get("TWITCH_CHANNEL")
 
 def connect():
   sock = socket.socket()
@@ -16,6 +21,6 @@ def connect():
 
   sock.send(f"PASS {token}\n".encode('utf-8'))
   sock.send(f"NICK {nickname}\n".encode('utf-8'))
-  sock.send(f"JOIN {channel}\n".encode('utf-8'))
+  sock.send(f"JOIN #{channel}\n".encode('utf-8'))
 
   return sock

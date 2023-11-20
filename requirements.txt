@@ -1,3 +1,4 @@
 mouse
 keyboard
 pywin32
+python-dotenv
