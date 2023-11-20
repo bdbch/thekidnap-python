@@ -11,6 +11,8 @@ nickname = 'learndatasci'
 
 token = os.environ.get("TWITCH_TOKEN")
 
+print("Hello world")
+
 # your channel name
 channel = os.environ.get("TWITCH_CHANNEL")
 
